@@ -1,0 +1,50 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Asegura que padding y border sean incluidos en el ancho total y alto de los elementos. */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Cambia la fuente para un look más moderno */
+}
+
+body {
+    height: 100vh;
+    background-color: #e3e0ec; /* Fondo ligeramente gris para reducir el contraste */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px; /* Añade más espacio dentro del botón */
+    font-size: 16px; /* Aumenta el tamaño de la fuente para mejorar la legibilidad */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; /* Suaviza el cambio de color y sombra */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Añade sombra para profundidad */
+    position: relative; /* Necesario para que z-index tenga efecto */
+}
+
+button:hover {
+    box-shadow: 0 8px 15px rgba(0,0,0,0.3); /* Sombra más pronunciada al pasar el mouse */
+    transform: translateY(-3px); /* Mueve el botón hacia arriba para dar sensación de elevación */
+    z-index: 1; /* Asegura que el botón se eleve sobre otros elementos */
+}
+
+.eliminar {
+    color: white;
+    background-color: #ff4d4d; /* Rojo más suave */
+}
+
+.eliminar:hover {
+    background-color: #ff6666; /* Rojo aún más claro al pasar el mouse */
+}
+
+.editar {
+    background-color: #4d88ff; /* Azul más vibrante */
+    color: white; /* Texto blanco para mejor contraste */
+}
+
+.editar:hover {
+    background-color: #80b3ff; /* Azul más claro al pasar el mouse */
+}

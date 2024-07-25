@@ -1,0 +1,29 @@
+
+
+<div class="contenedor">
+  <div class="titulo">
+    <h2>Resultados de la Búsqueda</h2>
+    <p>Se encontraron {{ resultados.length }} resultados</p>
+  </div>
+  
+<table >
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Marca</th>
+      <th>Precio</th>
+      <th>Categoría</th>
+      <th>Proveedor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let producto of resultados">
+      <td>{{ producto.nombre }}</td>
+      <td>{{ producto.marca }}</td>
+      <td>{{ producto.precio }}</td>
+      <td>{{ producto.categoria }}</td>
+      <td>{{ producto.proveedor }}</td>
+    </tr>
+  </tbody>
+</table>
+</div>

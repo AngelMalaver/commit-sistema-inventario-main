@@ -1,0 +1,19 @@
+<section class="modal">
+  <form [formGroup]="busquedaForm" (ngSubmit)="buscarProductos()" class="searchForm">
+    <input formControlName="nombre" placeholder="Nombre del Producto">
+    <input formControlName="categoria" placeholder="Categoría">
+    <input formControlName="marca" placeholder="Marca">
+    <input formControlName="proveedor" placeholder="Proveedor">
+  
+
+    <div class="form-row">
+      <label>Precio:</label>
+      <input type="number" formControlName="precioMin" placeholder="Min">
+      <span>-</span>
+      <input type="number" formControlName="precioMax" placeholder="Max">
+    </div>
+
+    
+    <button type="submit">Buscar</button>
+  </form>
+</section>

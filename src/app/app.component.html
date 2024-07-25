@@ -1,0 +1,16 @@
+
+<nav *ngIf="isLoggedIn">
+  <span>Sistema de Inventario</span>
+  <a routerLink="/home">Home</a>
+  <a routerLink="/productos" class="hovereable">Productos</a>
+  <a routerLink="/sedes" class="hovereable">Sedes</a>
+  <button class="abusqueda" (click)="toggleSearchForm()">{{ mostrarSearchForm ? 'Ocultar' : 'Mostrar' }} formulario de Búsqueda</button>
+  <button (click)="logout()" class="logout-button">Logout</button>
+</nav>
+
+
+<!-- <h3>{{isLoggedIn}}</h3> -->
+
+<app-search-form *ngIf="mostrarSearchForm && isLoggedIn"></app-search-form>
+
+<router-outlet></router-outlet>

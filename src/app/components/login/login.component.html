@@ -1,0 +1,14 @@
+<div class="loginContainer">
+    <h2>Login</h2>
+    <form (ngSubmit)="login(username.value, password.value)" class="loginForm">
+      <div>
+        <!-- <label for="username">Username:</label> -->
+        <input type="text" id="username" #username placeholder="Ingrese su nombre de usuario.">
+      </div>
+      <div>
+        <!-- <label for="password">Password:</label> -->
+        <input type="password" id="password" #password placeholder="Ingrese su contrasena">
+      </div>
+      <button type="submit">Iniciar Sesion</button>
+    </form>
+  </div>

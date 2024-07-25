@@ -1,0 +1,16 @@
+<div *ngIf="showModal">
+    <div class="modal">
+      <h2>{{ sede ? 'Editar' : 'Agregar' }} Sede</h2>
+      <form (submit)="submitForm()">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" [(ngModel)]="form.nombre" name="nombre" required>
+        <label for="ubicacion">Ubicación:</label>
+        <input type="text" id="ubicacion" [(ngModel)]="form.ubicacion" name="ubicacion" required>
+        <label for="contacto">Contacto:</label>
+        <input type="text" id="contacto" [(ngModel)]="form.contacto" name="contacto" required>
+        <button type="submit">Guardar</button>
+        <button class="eliminar" type="button" (click)="closeModal()">Cancelar</button>
+      </form>
+    </div>
+  </div>
+  

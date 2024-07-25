@@ -1,0 +1,49 @@
+nav {
+  background-color: #1a202c; /* Cambio a un azul marino profundo */
+  padding: 10px;
+  text-align: start;
+  display: flex;
+  gap: 15px; /* Aumento del espacio entre elementos */
+}
+
+nav a {
+  color: #81E6D9; /* Cambio a un cian claro para mayor contraste */
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 8px; /* Bordes más redondeados */
+  transition: background-color 0.3s, transform 0.2s; /* Transición suave para hover y transform */
+}
+
+.hovereable:hover, nav a:hover, span:hover, nav button:hover {
+  background-color: #2d3748; /* Un azul más oscuro para el hover */
+  transform: scale(1.05); /* Efecto de crecimiento al pasar el mouse */
+}
+
+nav a.active {
+  background-color: #E53E3E; /* Rojo intenso para el elemento activo */
+  color: #fff; /* Texto blanco para contraste */
+}
+
+span {
+  color: #81E6D9;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 20px;
+  transition: background-color 0.3s; /* Transición suave para el hover */
+}
+
+nav button {
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #4A5568; /* Un gris azulado */
+  color: #fff;
+  border: none;
+  border-radius: 8px; /* Bordes más redondeados */
+  transition: transform 0.2s; /* Efecto suave al hacer hover */
+}
+
+.logout-button {
+  margin-left: auto;
+  background-color: #E53E3E; /* Rojo intenso para destacar la acción de cierre de sesión */
+}

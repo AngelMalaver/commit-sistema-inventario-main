@@ -1,0 +1,40 @@
+  <div class="contenedor">
+
+    <div class="boton">
+      <h2>Productos</h2>
+      <button class="adProduct" (click)="openModal()" id="agregar">Agregar Producto</button>
+    </div>
+    
+  
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Imagen</th>
+        <th>Nombre</th>
+        <th>Marca</th>
+        <th>Precio</th>
+        <th>categoria</th>
+        <th>Proveedor</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let producto of productos">
+        <td>{{ producto.id }}</td>
+        <td><img *ngIf="producto.imagen" [src]="producto.imagen" alt="{{ producto.nombre }}" width="100" height="50"></td>
+        <td>{{ producto.nombre }}</td>
+        <td>{{ producto.marca }}</td>
+        <td>{{ producto.precio | currency }}</td>
+        <td>{{ producto.categoria }}</td>
+        <td>{{ producto.proveedor }}</td>
+        <td>
+          <button class="editar" (click)="editProducto(producto)">Editar</button>
+          <button class="eliminar" (click)="deleteProducto(producto.id)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <app-modal-producto *ngIf="showModal" [producto]="selectedProducto" (closed)="closeModal($event)"></app-modal-producto>
+  
